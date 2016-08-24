@@ -1,0 +1,31 @@
+<!-- @MIXIN -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>@mixin</h2>
+    <p>Mixins should be used throughout the project for styles that are repetitive to keep CSS as DRY as possible.</p>
+  </div>
+  <div class="column small-12 xlarge-6">
+    <div data-xrayhtml class="prism sass">
+			// Example of a mixin for a button
+			@mixin button($color) {
+				background-color: $color;
+				border: 1px solid mix(black, $color, 25%);
+				border-radius: 5px;
+				padding: .25em .5em;
+				
+				&:hover {
+					cursor: pointer;
+					background-color: mix(black, $color, 15%);
+					border-color: mix(black, $color, 40%);
+				}
+			}
+
+			.button {
+				@include button(#b4d455);
+			}
+    </div>
+  </div>
+</section>
+
+

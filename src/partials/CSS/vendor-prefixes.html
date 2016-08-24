@@ -1,0 +1,27 @@
+<!-- VENDOR PREFIXES -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>Vendor Prefixes</h2>
+    <p>To ensure that elements appear the same way across all browsers, vendor prefixes should be utilized. When possible, incorporate the insertion of vendor-prefixed selectors in with your build process. Doing so will allow you to just write CSS as you normally would, without stopping to insert prefixes. Grunt/Gulp - Use of Autoprefixer is preferred:</p>
+    <ul>
+    	<li>Grunt: <a href="http://grunt-tasks.com/autoprefixer/">http://grunt-tasks.com/autoprefixer/</a></li>
+    	<li>Gulp: <a href="https://www.npmjs.com/package/gulp-autoprefixer">https://www.npmjs.com/package/gulp-autoprefixer</a></li>
+    </ul>
+  </div>
+  <div class="column small-12 xlarge-6">
+    <div data-xrayhtml class="prism sass">
+			.selector {
+				-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+				box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+			}
+
+			// Using Autoprefixer only require the following
+
+			.selector {
+				box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+			}
+    </div>
+  </div>
+</section>

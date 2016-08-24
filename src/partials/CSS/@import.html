@@ -1,0 +1,17 @@
+<!-- @IMPORT -->
+
+<!--
+
+CSS should be compiled into a single file using a preprocessor like SASS or LESS using @import to first concatenate all stylesheets into a one. This should then be linked to from the head of each page.
+
+Use <link> tag to add CSS to the <head> tag within pages as @import is slower and causes extra page requests to occur.
+
+-->
+
+<!-- Link -->
+<link rel="stylesheet" href="main.css">
+
+<!-- Avoid this -->
+<style>
+  @import url("main.css");
+</style>

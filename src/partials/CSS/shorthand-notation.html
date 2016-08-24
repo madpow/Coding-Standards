@@ -1,0 +1,32 @@
+<!-- SHORTHAND NOTATION -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>Shorthand Notation</h2>
+    <p>n general, CSS shorthand is preferred to longform. It makes elements easier to modify, since everything is grouped in one place, and it reduces the amount of line space used in the document. However, do not use shorthand notation unless you are setting all the values. Unnecessarily setting values in shorthand notation causes overrides and unintended side effects throughout your CSS.</p>
+  </div>
+  <div class="column small-12 xlarge-6">
+    <div data-xrayhtml class="prism sass">
+			// Longform Version
+			.narwhal {
+			background-color: #cc6699;
+			background-image: url(‘_img/button-submit.png’);
+			background-position: 0 -30px;
+			background-repeat: repeat-y;
+			color: #000000;
+			margin-top: 5px;
+			margin-right: 10px;
+			margin-bottom: 5px;
+			margin-left: 0;
+			}
+
+			// Shorthand Version
+			.narwhal {
+			background: #c69 url(‘_img/button-submit.png’) 0 -30px repeat-y;
+			color: #000;
+			margin: 5px 10px 5px 0;
+			}
+    </div>
+  </div>
+</section>
+

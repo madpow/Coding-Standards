@@ -1,0 +1,102 @@
+<!-- @EXTEND -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>@extend</h2>
+    <p>The use of @extend should be limited because of its 'invisible' nature as well as it being inflexible in most cases.</p>
+
+    <p>Only use @extend to extend utility classes.</p>
+
+    <p>If you are looking to group common styles/declarations together for use in multiple rule sets then the use of mixins is preferred.</p>
+
+    <p>The following examples were taking from http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/</p>
+  </div>
+  <div class="column small-12 xlarge-6" >
+    <div data-xrayhtml class="prism sass">
+        // Avoid doing this
+
+        %bold {
+            font-weight: bold;
+        }
+
+        // ...
+
+        .header--home > .header__tagline {
+            @extend %bold;
+            color: #333;
+            font-style: italic;
+        }
+
+        // ...
+
+        .btn--warning {
+            @extend %bold;
+            background-color: red;
+            color: white;
+        }
+
+        // ...
+
+        .alert--error > .alert__text {
+            @extend %bold;
+            color: red;
+        }
+
+        // As it results in:
+
+        .header--home > .header__tagline,
+        .btn--warning,
+        .alert--error > .alert__text {
+            font-weight: bold;
+        }
+
+        // ...
+
+        .header--home > .header__tagline {
+            color: #333;
+            font-style: italic;
+        }
+
+        // ...
+
+        .btn--warning {
+            background-color: red;
+            color: white;
+        }
+
+        // ...
+
+        .alert--error > .alert__text {
+            color: red;
+        }
+
+
+        // Only extend utility classes and in closely related rule sets:
+
+        .btn,
+        %btn {
+            display: inline-block;
+            padding: 1em;
+        }
+
+        .btn-positive {
+            @extend %btn;
+            background-color: green;
+            color: white;
+        }
+
+        .btn-negative {
+            @extend %btn;
+            background-color: red;
+            color: white;
+        }
+
+        .btn-neutral {
+            @extend %btn;
+            background-color: lightgray;
+            color: black;
+        }
+    </div>
+  </div>
+</section>
+

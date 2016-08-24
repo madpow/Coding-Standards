@@ -1,0 +1,84 @@
+<!-- MEDIA QUERIES -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>Media Queries</h2>
+    <p>When using media queries, place them close to their relevant rule sets.</p>
+    <p>Do not place media queries in separate stylesheets from their rule sets.</p>
+  </div>
+  <div class="column small-12 xlarge-6">
+    <div data-xrayhtml class="prism sass">
+			.selector {
+				// styles
+			}
+
+			.selector-two {
+				// styles
+				ul {
+					// styles
+				}
+			}
+
+			@media only screen and (min-width: 768px) {
+				.selector {
+					// styles
+				}
+
+				.selector-two {
+					// styles
+					ul {
+						// styles
+					}
+				}
+			}
+
+			@media only screen and (min-width: 940px) {
+				.selector {
+					// styles
+				}
+
+				.selector-two {
+					// styles
+					ul {
+						// styles
+					}
+				}
+			}
+
+			// OR ?
+
+			.selector {
+				// styles
+
+				@media only screen and (min-width: 768px) {
+					// styles
+				}
+
+				@media only screen and (min-width: 940px) {
+					// styles
+				}
+			}
+
+			.selector-two {
+				// styles
+				ul {
+					// styles
+				}
+
+				@media only screen and (min-width: 768px) {
+					// styles
+					ul {
+						// styles
+					}
+				}
+
+				@media only screen and (min-width: 940px) {
+					// styles
+					ul {
+						// styles
+					}
+				}
+			}
+    </div>
+  </div>
+</section>

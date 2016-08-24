@@ -1,0 +1,33 @@
+<!-- INCLUDING CSS AND JAVASCRIPT -->
+
+<section class="row rule" data-equalizer data-equalize-on="xlarge">
+  <div class="column small-12 xlarge-6" data-equalizer-watch>
+    <h2>Including CSS and Javascript</h2>
+    <p>Include all CSS files within the head and Javascript files before the closing body tag of your page.</p>
+    <p>There is no need to include the type attribute when linking CSS or Javascript files as the browser automatically defaults to their correct values.</p>
+  </div>
+  <div class="column small-12 xlarge-6" data-equalizer-watch>
+    <div class="prism html">
+    	<pre>
+    		<code>
+
+		    	&lt;!DOCTYPE html>
+					&lt;html lang="en-us">
+						&lt;head>
+							&lt;meta charset="utf-8">
+							&lt;!-- External CSS Stylesheet -->
+							&lt;link rel="stylesheet" href="...">
+						&lt;/head>
+						&lt;body>
+							...
+							&lt;!-- Javascript -->
+							&lt;script src="main.js">&lt;/script>
+						&lt;/body>
+					&lt;/html>
+
+				</code>
+			</pre>
+    </div>
+  </div>
+</section>
+

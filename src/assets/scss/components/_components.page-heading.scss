@@ -1,0 +1,13 @@
+// ----------------------------------------------
+// Components - Page Heading
+// ----------------------------------------------
+
+.page-heading {
+	background: $mad-pow url("../img/home_header.jpg") no-repeat center top;;
+	color: $white;
+	text-align: center;
+	padding: 2.5rem 0rem;
+	h1 {
+		font-weight: 700;
+	}
+}

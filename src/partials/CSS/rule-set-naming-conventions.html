@@ -1,0 +1,112 @@
+<!-- RULE SET NAMING CONVENTIONS -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>Rule Set Naming Conventions</h2>
+    <p>When assigning names to ID's use camel-case<br><i>P.S. Avoid using ID's for styling and instead only use them as Javascript hooks</i></p>
+    <p>When assigning names to classes use lowercase</p>
+    <p>Feel free to use shorthand notation for classnames but try to avoid classnames that don't have any meaning.</p>
+    <p>Try to keep classnames as short as possible. Keeping your classnames to a max of three words.</p>
+    <p>Ensure that classnames are meaningful and structural. Avoid classnames that are purely presentational.</p>
+    <p>Avoid the use of attribute selectors as browser performance is known to be impacted by these. (Ex. [type="…"])</p>
+		<p>Try to avoid using generic element tags as selectors. This will help with project scoping and overlap in styles.</p>
+		<p>When using a framework, naming conventions are typically already in place. You may choose to continue the nomenclature of particular framework. For example, "btn" might be "btn-primary" in Foundation 6.</p>
+
+		<h3>BEM</h3>
+		<p>All classes and ID’s will follow the BEM naming methodology (Block, Element, Modifier) in order to create a clear understanding and relationship between the HTML and CSS of the project. For more information regarding BEM, you can look here.</p>
+		<p>However, developers can determine their own structure for displaying these names on a per project basis. For example, Tanya may name the search button in a search bar "searchbar-button", whereas Jessica might name it "searchbox_button". As long as the same meaning is conveyed and this style is consistent throughout the project then this is acceptable.</p>
+		<p>Following BEM practices, classes should not be scoped to parent unless it is absolutely necessary.</p>
+
+		<h3>Modularity</h3>
+		<p>When writing CSS, keep modularity in mind (this goes hand in hand with the HTML code that you've written). HTML and CSS should be written in modular fashion so that components are made from the groupings of elements on a page. These are then given specific class names and styles applied to that specific component, not the page. Components may move around and be placed in various areas on a site.</p>
+  </div>
+  <div class="column small-12 xlarge-6">
+    <div data-xrayhtml class="prism sass">
+			// Avoid using ID's for styling
+
+			#mainContent {
+				// styles
+			}
+
+
+			// Class names in all lowercase
+
+			.login-wrapper {
+				// styles
+			}
+
+
+			// Naming - This is OK
+
+			.btn {
+				// styles
+			}
+
+
+			// Naming - This is not OK
+
+			.b {
+				// styles
+			}
+
+
+			// Short Class Name (Max 3 words) - Meaningful Names
+
+			.login-main_body {
+				// styles
+			}
+
+
+			// Class Names - Avoid non-meaningful names
+			.red {
+				// styles
+			}
+
+			.big-text {
+				// styles
+			}
+
+
+			// Attribute Selectors - Avoid:
+
+			input[type="text"] {
+				// styles
+			}
+
+			header nav {
+				// styles
+			}
+
+
+			// Instead, use classes
+
+			.input-text {
+				// styles
+			}
+
+			.nav-main {
+				// styles
+			}
+
+
+			// Modularity Example: 'log-in box' appears in the header on the index.html page but on the login.html page, it is not.
+
+			// Bad Example: Because the login-box styles only pertain to when it is located in the header
+			.header .login-box {
+				color: pink;
+				font-size: 14px;
+			}
+
+			// Good: Modular, can be reused throughout the project
+			.login-box {
+				.login-header {
+					color: pink;
+				}
+				.login-body {
+					font-size: 14px;
+				}
+			}
+
+    </div>
+  </div>
+</section>

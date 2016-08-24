@@ -1,0 +1,43 @@
+// ----------------------------------------------
+// Code
+// ----------------------------------------------
+
+pre[class*="language-"] {
+	margin: 0;
+	padding: 2.25em 3em;
+	height: 100%;
+}
+
+code {
+	border: none;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	tab-size: 2;
+}
+
+.xrayhtml, .prism {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+
+	&.method-inline .source-panel {
+		border-top: none;
+		margin: 0;
+		height: 100%;
+	}
+
+	.xraytitle {
+		display: none;
+	}
+
+	pre {
+		height: 100%;
+	}
+}
+
+.snippet {
+	display: none;
+}

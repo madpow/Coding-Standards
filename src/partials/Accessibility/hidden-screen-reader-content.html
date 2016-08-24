@@ -1,0 +1,19 @@
+<!-- HIDDEN SCREEN READER CONTENT -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>Hidden Screen Reader Content</h2>
+    <p>Text can and should be hidden from view when it isn't in the design but necessary for disabled users to understand content. It's important to rememeber that <code>display: none</code> takes the element out of the DOM. This option will hide the content from everyone.</p>
+  </div>
+  <div class="column small-12 xlarge-6">
+    <div data-xrayhtml class="prism sass">
+			sr-text {
+				visibility: hidden;
+				position: absolute;
+				left: -10000px;
+				height: 1px;
+				width: 1px;
+			}
+    </div>
+  </div>
+</section>

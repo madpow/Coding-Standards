@@ -1,0 +1,23 @@
+// ----------------------------------------------
+// Objects - Layout
+// ----------------------------------------------
+
+section.rule {
+	border-bottom: 1px solid $tan-700;
+	.column {
+		&:first-of-type {
+			padding: 1.75rem 2rem;
+		}
+		&:last-of-type {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	@include breakpoint(xlarge) {
+		.column {
+			&:first-of-type {
+				padding: 1.75rem 2rem;
+			}
+		}
+	}
+}

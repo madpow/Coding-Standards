@@ -1,0 +1,68 @@
+<!-- DECLARATION ORDER -->
+
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
+    <h2>Declaration Order</h2>
+    <p>Declarations within a selector should be ordered in the following manner:</p>
+    <ul>
+    	<li>Alphabetically</li>
+    </ul>
+    <p>OR:</p>
+    <ul>
+    	<li>Positioning</li>
+    	<li>Box Model</li>
+    	<li>Typographic</li>
+    	<li>Visual</li>
+    </ul>
+    <p><i>(Taken from codeguide.io: Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</i></p>
+    <p><i>Everything else takes place inside the component or without impacting the previous two sections, and thus they come last.)</i></p>
+  </div>
+  <div class="column small-12 xlarge-6">
+    <div data-xrayhtml class="prism sass">
+			// Alphabetically
+			.selector {
+				background-color: white;
+				color: blue;
+				display: inline;
+				font-size: 1.25rem
+				height: 1.5rem;
+				position: absolute;
+				top: 1rem;
+				width: 20%;
+			}
+
+			// Positioning, Box model, Typographic, Visual
+
+			.selector {
+				// Positioning
+				position: absolute;
+				top: 1rem;
+
+				// Box Model
+				display: inline;
+				height: 1.5rem;
+				width: 20%;
+
+				// Typographic
+				font-size: 1.25rem;
+
+				//Visual
+				background-color: white;
+				color: blue;
+			}
+
+
+			// Above without comments
+			.selector {
+				position: absolute;
+				top: 1rem;
+				display: inline;
+				height: 1.5rem;
+				width: 20%;
+				font-size: 1.25rem;
+				background-color: white;
+				color: blue;
+			}
+    </div>
+  </div>
+</section>
