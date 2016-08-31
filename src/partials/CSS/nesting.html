@@ -3,9 +3,10 @@
 <section class="row rule">
   <div class="column small-12 xlarge-6">
     <h2>Nesting</h2>
-    <p>Do not nest styles unless you are scoping those styles to a parent. Although nesting may appear to keep code organized in SASS or LESS it causes the compiled CSS code to become unreadable. In addition, nesting can cause scoping issues throughout the project.</p>
-    <p>Consider creating styles in a more modular fashion in order to reduce the need for nesting.</p>
-    <p>If nesting is necessary, avoid going more than 3 levels deep.</p>
+    <p>Do not nest styles unless you are scoping those styles specifically to a parent. Although nesting may appear to keep code organized in SASS or LESS it causes the compiled CSS code to become unreadable. In addition, nesting can cause specificity issues throughout the project. <b>Rule: Don't nest unless you absolutely have to</b></p>
+    <p>Consider creating styles in a more modular fashion in order to reduce or eliminate the need for nesting.</p>
+    <p>If nesting is necessary, avoid going more than 2 levels deep.</p>
+    <p>When nesting styles, leave a blank line before and after the nested ruleset.</p>
   </div>
   <div class="column small-12 xlarge-6">
     <div data-xrayhtml class="prism sass">
@@ -33,9 +34,11 @@
 
 			.div {
 				// styles
+
 				p {
 					// styles
 				}
+				
 			}
 
 			span.selector {

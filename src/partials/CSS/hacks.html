@@ -1,0 +1,22 @@
+<!-- HACKS -->
+
+<section class="row rule" data-equalizer data-equalize-on="xlarge">
+  <div class="column small-12 xlarge-6" data-equalizer-watch>
+    <h2>Hacks</h2>
+    <p><i>Note: these rules should not be used unless there is no other option.</i></p>
+    <p>In order to increase specificity without nesting, class selectors can be chained with themselves.</p>
+    <p>For third party components where source code cannot be altered, the ID can be used as an attribute selector. This ensures the same amount of specificity as a class.</p>
+  </div>
+  <div class="column small-12 xlarge-6" data-equalizer-watch>
+    <div data-xrayhtml class="prism sass">
+			.selector.selector {
+				background-color: #cfa338;
+			}
+
+			[id="camelCase"] {
+				color: #fff;
+			}
+
+    </div>
+  </div>
+</section>

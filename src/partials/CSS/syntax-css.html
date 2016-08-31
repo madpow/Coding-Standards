@@ -8,10 +8,10 @@
     	<li>Editors should be programmed to perform a 'soft tab' equal to two spaces if the developer prefers to use the tab key.</li>
     	<li>Major file-size issues related to using spaces instead of tabs are inconsequential because of minification standards.</li>
     </ul>
-    <p>When grouping together, Selectors should be placed on their own lines and separated by a comma.</p>
+    <p>When grouping together, Selectors should be placed on their own lines and separated by a comma. <i>Note: related selectors should be placed on the same line.</i></p>
     <p>One space should be used between selectors and the opening brace of the declaration block. In addition, closing braces should be placed on a new line by themselves.</p>
     <p>Use double quotes when using attribute values in selectors.</p>
-    <p>Declarations should always be indented once.</p>
+    <p>Declarations should always be indented once (2 spaces).</p>
     <p>A space should be placed after the : for each declaration and each declaration should be on its own line (unless it is a single declaration - if this is the case, see - Single Declarations).</p>
     <p>Each declaration should end in a semi-colon (;).</p>
     <p>Prefix property values with a leading zero based on the following ruleset:</p>
@@ -21,28 +21,43 @@
     </ul>
     <p>When assigning a zero value to a property, avoid specifying the unit of measurement (margin: 0; instead of margin: 0px;)</p>
     <p>Include a space after each comma in separated property values (rgba(), box-shadow(), etc.)</p>
+    <p>When writing declarations that are related to each other, attempt to align their values for easier editing.</p>
   </div>
   <div class="column small-12 xlarge-6" data-equalizer-watch>
     <div data-xrayhtml class="prism sass">
-			// Proper syntax
+        // Proper syntax
 
-			.selector,
-			.selector-two,
-			.selector-three {
-				// styles
-			}
-			
-			.selector[type="..."] {
-				// styles
-			}
+        .selector,
+        .selector-two, .selector-two--modifier,
+        .selector-three {
+            // styles
+        }
+		
+        .selector[type="..."] {
+            // styles
+        }
 
-			.selector {
-				color: #fff;
-				font-size: 1rem;
-				margin-top: 0.9rem;
-				margin-bottom: 0;
-				background-color: rgba(0, 0, 0, .5);
-			}
+        .selector {
+            color: #fff;
+            font-size: 1rem;
+            margin-top: 0.9rem;
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .selector-two {
+            -webkit-border-radius: 3px;
+               -moz-border-radius: 3px;
+                    border-radius: 3px;
+        }
+
+        .selector-three {
+            position: absolute;
+            top:    0;
+            right:  0;
+            bottom: 0;
+            left:   0;
+        }
 
     </div>
   </div>

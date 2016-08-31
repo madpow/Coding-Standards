@@ -1,7 +1,7 @@
 <!-- FILE ORGANIZATION/STRUCTURE -->
 
-<section class="row rule" data-equalizer data-equalize-on="xlarge">
-  <div class="column small-12 xlarge-6" data-equalizer-watch>
+<section class="row rule">
+  <div class="column small-12 xlarge-6">
     <h2>File Organization/Structure</h2>
     <p>Preferred SASS &amp; LESS file organization is using ITCSS (Inverted Triangle CSS) methodology. A boilerplate and introduction of this folder structure can be found here.</p>
 
@@ -9,25 +9,29 @@
 
 		<p>Do not organize code by page as this narrows a component's scope drastically.</p>
 
-		<p>Ensure that every file has an introductory comment with at least the stylesheets name or what it contains.</p>
+		<p>Ensure that every file has an introductory title with the stylesheet's name or what the stylesheet contains.</p>
 
 		<p>Use consistent white space between rule sets in order to increase legibility. Preferred white space is one blank line.</p>
   </div>
-  <div class="column small-12 xlarge-6" data-equalizer-watch>
+  <div class="column small-12 xlarge-6">
     <div data-xrayhtml class="prism sass">
-			// White space
+    	/*------------------------------------*\
+    	  INTRODUCTORY TITLE
+    	\*------------------------------------*/
 
-			.selector {
-				// styles
-			}
+    	// White space
 
-			.selector-two {
-				// styles
-			}
+    	.selector {
+    		// styles
+    	}
 
-			.selector-three {
-				// styles
-			}
+    	.selector-two {
+    		// styles
+    	}
+
+    	.selector-three {
+    		// styles
+    	}
     </div>
   </div>
 </section>
